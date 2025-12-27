@@ -1,30 +1,14 @@
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import React, { StrictMode } from 'react';
+
+// Récupération de l'élement racine
+const root = createRoot(document.querySelector('#root'));
 
 // Création d'éléments React
-const root = createRoot(document.getElementById('root'));
+const image = <img src="https://images.pexels.com/photos/31086170/pexels-photo-31086170.jpeg" alt="" width={200} />;
 
-const title = React.createElement(
-  'h1',
-  { className: 'myClass'},
-  'Hello world'
-);
+const component = () => {
+  return <h1 className='title'>Hello world !!</h1>;
+}
 
 
-
-const section = React.createElement(
-  'section', 
-  {className: 'sectionPresentation'},
-  title // injecter l'élement React de titre dans la section
-);
-
-root.render(section);  // injecter l'élement React de section dans l'élement racine
-/*
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
-*/
+root.render(image);
