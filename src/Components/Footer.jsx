@@ -1,5 +1,5 @@
 // Importer un module CSS
-import styles from '../css/Footer.module.css';
+import styles from '../css/Footer.module.scss';
 
 // Exporter le composant
 export default function Footer(){

@@ -1,4 +1,4 @@
-import '/src/css/article.css';
+import '/src/css/article.scss';
 
 export default function Article ()  {
     const color = "white";
