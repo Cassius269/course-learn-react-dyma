@@ -1,0 +1,7 @@
+article {
+    border: 1px solid salmon;
+    max-width: 400px;
+    margin: auto;    
+    background-color: grey;
+    margin-top: 1rem;
+}

@@ -1,12 +1,13 @@
 import { createRoot } from 'react-dom/client'
-import Article from './components/article';
-
+import Article, { Title } from './components/article';
+import './css/index.css'; // Importer la stylisation de base de toute l'application
 
 // Récupération de l'élement racine
 const root = createRoot(document.querySelector('#root'));
 
-
-
 root.render(
-    <Article/>
+    <>
+        <Title />
+        <Article/>  
+    </>
 ); 
