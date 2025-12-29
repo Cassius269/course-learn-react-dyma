@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import  { Profile, Image } from './Components/Profile';
+import { Profile,  Image } from './Components/Profile';
 
 // Récupération de l'élement racine
 const root = createRoot(document.querySelector('#root'));
@@ -12,5 +12,12 @@ function SayHello(){
 
 
 root.render(
-    <Profile source ="https://images.pexels.com/photos/28271725/pexels-photo-28271725.jpeg" />  
+  <>
+    <Profile name="Jean" age={12} />  
+    <Image/>
+    <Image/>
+    <Profile name="Pierre" age={10}>
+      <button>Cliquer</button>
+    </Profile>
+  </>
 ); 
