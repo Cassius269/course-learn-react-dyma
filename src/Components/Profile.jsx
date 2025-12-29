@@ -1,15 +1,18 @@
-export const Profile = (props) => {
-  console.log(props);
+export const Profile = ({source}) => {
+  console.log(name);
   // console.log(props.age);
-  return (<>
-            <h2>Hello { props.name } !</h2>
-            <p>Vous fêtez vos { props.age } an{ isPlural(props)} chez nous aujourd'hui.</p>
+  /*return (<>
+            <h2>Hello { name } !</h2>
+            <p>Vous fêtez vos { age } an{ isPlural({ age })} chez nous aujourd'hui.</p>
             <Image />
         </>)
+        */
+
+  return <Image source= { source } />
 };
 
-const Image = () => {
-  return <img src="https://images.pexels.com/photos/28271725/pexels-photo-28271725.jpeg" alt="image représentant un passage" width={195} />
+export const Image = ({ source }) => {
+  return <img src={ source } alt="image représentant un passage" width={195} />
 }
 
-const isPlural = ( props) =>  props.age  >= 2  ? 's' : ''; // syntaxe javaScript
+const isPlural = ( { age }) =>  age  >= 2  ? 's' : ''; // syntaxe javaScript

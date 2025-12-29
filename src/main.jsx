@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import  { Profile } from './Components/Profile';
+import  { Profile, Image } from './Components/Profile';
 
 // Récupération de l'élement racine
 const root = createRoot(document.querySelector('#root'));
@@ -11,4 +11,6 @@ function SayHello(){
 
 
 
-root.render(<Profile name="John Dow" age={ 12 } isAdult={ true } />); // passer differents types dans les props
+root.render(
+    <Profile source ="https://images.pexels.com/photos/28271725/pexels-photo-28271725.jpeg" />  
+); 
