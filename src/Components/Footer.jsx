@@ -1,12 +1,12 @@
 // Importer un module CSS
-import styles from '../css/Footer.module.scss';
+import styles from '../assets/styles/layouts/Footer.module.scss';
 
 // Exporter le composant
 export default function Footer(){
     // console.log(styles.test);
     return (
         <>
-            <footer className= { styles.test}>
+            <footer className= { `${styles.test} mt-5 bg-info`}>
                 <ul>
                     <li><a href="#">Facebook</a></li>
                     <li> <a href="#">Linkedin</a></li>
