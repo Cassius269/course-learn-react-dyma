@@ -14,10 +14,10 @@ export default function App(){
                     <div className='row d-flex justify-content-center gap-4 gap-md-4 gap-lg-5'>
                         <Article displayArticle={true} />  
                         <Article displayArticle={true} />  
-                        <Article />  
-                        <Article />  
-                        <Article />  
-                        <Article />  
+                        <Article displayArticle={false}/>  
+                        <Article displayArticle={true} />  
+                        <Article displayArticle={true} />  
+                        <Article displayArticle={true} />  
                     </div>
                 </section>
             </main>
