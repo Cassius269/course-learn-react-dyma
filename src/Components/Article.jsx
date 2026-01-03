@@ -1,10 +1,9 @@
 import '../assets/styles/layouts/Footer.module.scss';
 
 export default function Article ({displayArticle})  {
-console.log({displayArticle});
+// console.log({displayArticle});
 
-    return displayArticle ? (
-            <article className='mt-4 card col-8 col-md-6 col-lg-3'>
+    return  displayArticle && (<article className='mt-4 card col-8 col-md-6 col-lg-3'>
                                 <div className='card-body'>
                                     <h3 className='bg-primary py-3 text-white card-title'>Lorem ipsum dolor sit amet</h3>
                                     <p className='card-text text-body-secondary'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita iure recusandae deleniti ullam reiciendis, eaque totam eum itaque at temporibus quos libero quo, deserunt tempora. Natus libero iusto asperiores sunt.
@@ -15,10 +14,7 @@ console.log({displayArticle});
                                         <button type='button' className='btn btn-danger'>Continuer la lecture...</button>
                                     </a>
                                 </div>
-            </article>
-            ) : (
-                    <p>Aucun article</p>
-                )  
-            ;    
+            </article>) 
+    ; 
 }
 
