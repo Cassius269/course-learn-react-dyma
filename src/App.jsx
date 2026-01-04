@@ -2,6 +2,7 @@ import Article from './components/article';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { Title } from './components/Title';
+import Articles from './components/Articles';
 
 export default function App(){
     return (
@@ -9,12 +10,7 @@ export default function App(){
             <Header />
             <main className='container'>
                 <Title/>
-                <section>
-                    <h2 className='mt-5 mb-3'>Liste des articles</h2>
-                    <div className='row d-flex justify-content-center gap-4 gap-md-4 gap-lg-5'>
-                        <Article displayArticle={true} />
-                    </div>
-                </section>
+                <Articles />
             </main>
             <Footer/>
         </>
