@@ -14,7 +14,7 @@ const Articles = () => {
                 <div className='row d-flex justify-content-center gap-4 gap-md-4 gap-lg-5'>
                     {publishedArticles.map( a =>( 
                         <Article 
-                            id={a.id} 
+                            key={a.id} 
                             title={a.title} 
                             content={a.content} 
                         />)
