@@ -11,7 +11,6 @@ export default function Form(){
 
     const handleFocus = (e) => {
         console.log("Focus en cours sur l'input: ", e.target);
-
     }
 
     return (
@@ -21,7 +20,7 @@ export default function Form(){
                 <InputPlusLabel onFocus={handleFocus} type="text" name="lastname" placeholder="Nom de Famille" />
                 <InputPlusLabel onFocus={handleFocus} type="text" name="firstname" placeholder="Prénom" />
                 <InputPlusLabel onFocus={handleFocus} type="email" name="email"  placeholder="email" />
-                <Button type="submit">Submit</Button>
+                <Button type="submit">Envoyer</Button>
                 {/* <button type="submit" className="btn btn-primary m-auto mt-5 col-11 col-md-6 col-lg-3">Soumettre</button>      */}
             </form>
         </section>
