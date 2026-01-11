@@ -10,7 +10,7 @@ export default function Form(){
         }
     );
     
-    const [users, setUsers]= useState([]);
+    const [userList, setUsers]= useState([]);
 
     // Les gestionnaires d'évenements de formulaire (submit, input, focus)
     const handleSubmit = (e) => {
@@ -18,7 +18,7 @@ export default function Form(){
     
         console.log(user);
         // soumettre le formulaire
-        const newUserList = [...users, {...user} ];
+        const newUserList = [...userList, {...user} ];
 
         console.log(newUserList)
         setUsers(newUserList);
@@ -59,6 +59,15 @@ export default function Form(){
     });
   };
 
+  const handlerClickDelete = (index) => {
+    // const id = e.target.value;
+    console.log(index);
+
+    const newUserList = userList.filter((u,i) => i !==index);
+    console.log(newUserList);
+    setUsers(newUserList);
+  };
+
   // Le markup du formulaire
     return (
         <>
@@ -83,7 +92,7 @@ export default function Form(){
         </section>
         <section>
             <ul className="">
-                {users.map(u => <li key={u.name}>{u.firstname}</li>)}
+                {userList.map((u, index) => <li key={u.name}>{u.firstname} <i onClick={() => handlerClickDelete(index)} role="button" className="bi bi-trash3 cursor-pointer"></i></li>)}
             </ul>
         </section>
         </>       
