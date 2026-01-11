@@ -7,7 +7,7 @@ import { StrictMode } from 'react';
 const root = createRoot(document.querySelector('#root'));
 
 root.render(
-   <StrictMode>
+   // <StrictMode>
       <App />
-   </StrictMode>
+   // </StrictMode>
 ); 
