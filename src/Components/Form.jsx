@@ -10,7 +10,7 @@ export default function Form(){
         }
     );
     
-    const [userList, setUsers]= useState([]);
+    const [userList, setUserList]= useState([]);
 
     // Les gestionnaires d'évenements de formulaire (submit, input, focus)
     const handleSubmit = (e) => {
@@ -18,10 +18,9 @@ export default function Form(){
     
         console.log(user);
         // soumettre le formulaire
-        const newUserList = [...userList, {...user} ];
-
+        const newUserList = [...userList, {...user} ]; 
         console.log(newUserList)
-        setUsers(newUserList);
+        setUserList(newUserList);
 
         console.log("Formulaire envoyé");
     }
@@ -63,10 +62,20 @@ export default function Form(){
     // const id = e.target.value;
     console.log(index);
 
-    const newUserList = userList.filter((u,i) => i !==index);
+    const newUserList = userList.filter((u,i) => i !==index); // faire une copie de la liste
     console.log(newUserList);
-    setUsers(newUserList);
+    setUserList(newUserList); // modifier l'état de la liste des utilisateurs
   };
+
+
+  const handleClickSort = () => {
+        const newUserList = [...userList];
+        
+        newUserList.sort((a,b) => a.firstname.localeCompare(b.firstname)); //
+        console.log(newUserList);
+        setUserList(newUserList); // modifier l'état de la liste des utilisateurs
+
+  }
 
   // Le markup du formulaire
     return (
@@ -90,9 +99,12 @@ export default function Form(){
                 <Button type="submit">Envoyer</Button>
             </form>
         </section>
-        <section>
+        <section className="mt-5">
+            <div className="mb-2">
+                <button onClick={handleClickSort} className="btn btn-success">Trier la liste</button>
+            </div>
             <ul className="">
-                {userList.map((u, index) => <li key={u.name}>{u.firstname} <i onClick={() => handlerClickDelete(index)} role="button" className="bi bi-trash3 cursor-pointer"></i></li>)}
+                {userList.map((u, index) => <li key={u.id || index}>{u.firstname} <i onClick={() => handlerClickDelete(index)} role="button" className="bi bi-trash3 cursor-pointer"></i></li>)}
             </ul>
         </section>
         </>       
